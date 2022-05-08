@@ -83,7 +83,8 @@ h2, small{
 }
 
 .location{
-  text-shadow: 1px 1px lightblue;
+  color: lightskyblue;
+  text-shadow: 1px 1px blueviolet;
 }
 
 h1{
@@ -92,6 +93,7 @@ h1{
 
 span{
   color: lightskyblue;
+  text-shadow: 1px 1px blueviolet;
 }
 
 .weatherInfo{
@@ -118,17 +120,23 @@ footer{
   opacity: .7;
   font-weight: bold;
   color: blueviolet;
-  text-shadow: 1.5px 1px lightblue;
+  text-shadow: 1.5px 1px lightskyblue;
 }
 
 .loader-title{
   color: white;
+
 }
 .span-title{
   color: blueviolet;
+  text-shadow: 1px 1px lightskyblue;
 }
 
 .fa-solid{
   margin-right: 5px;
   text-shadow: none;
+}
+
+.first-title{
+  text-shadow: 1px 1px lightskyblue;
 }

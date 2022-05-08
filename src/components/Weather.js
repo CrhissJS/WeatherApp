@@ -10,8 +10,6 @@ const Weather = () => {
 
     const [ weather, setWeather ] = useState({});
 
-    const [ isCelcius, setIsCelcius ] = useState(true);
-
     useEffect(()=>{
         function success(pos) {
         var crd = pos.coords;
@@ -21,8 +19,8 @@ const Weather = () => {
         console.log('Longitude: ' + crd.longitude);
         console.log('More or less' + crd.accuracy + 'meters.');
         axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&appid=acebb4ad9cca4df994d748a14a4df488`)
-        .then((res) => setWeather(res.data) );
-    
+        .then((res) => setWeather(res.data))
+
         }
     
         function error(err) {
@@ -33,8 +31,7 @@ const Weather = () => {
     
     },[])
 
-    console.log(weather)
-
+    const [ isCelcius, setIsCelcius ] = useState(true);
 
     const changeTemp = () => setIsCelcius(!isCelcius);
 
@@ -51,7 +48,7 @@ const Weather = () => {
     return (
     <div>
         <div className="container" >
-            <h1>Weather <span>App</span></h1>
+            <h1 className="first-title">Weather <span>App</span></h1>
             <h2 className="location">{weather.name}, {weather.sys?.country}</h2>
             <div className="container-weather" style={{background: colors[randomColor]}}>
                 {/* <div className='overlay' style={{background: colors[randomColor]}}></div> */}
