@@ -22,7 +22,7 @@ const Loader = () => {
     document.body.style = `background-image: url(${imagesbg[3]});
     background-size: 110%;
     background-repeat: no-repeat;
-    padding-top: 20%;
+    padding-top: 15%;
     `
 
     return (

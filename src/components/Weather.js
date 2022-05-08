@@ -41,8 +41,9 @@ const Weather = () => {
 
 
     document.body.style = `background-image: url(${imagesbg[randomImage]});
-    background-size: cover;
-    background-position: center;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    padding-top: 15%
     `   
 
     return (
