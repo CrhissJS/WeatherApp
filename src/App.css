@@ -1,0 +1,134 @@
+.App {
+  text-align: center;
+  padding-top: 20px;
+  height: 100%;
+}
+
+.container{
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+  padding: 20px;
+  margin: 0 auto;
+  background-color: white;
+  opacity: .9;
+}
+
+
+.container-weather{
+  display: flex;
+  justify-content: center;
+  border: 3px solid blueviolet;
+  border-radius: 10px;
+  opacity: .9;
+}
+
+
+/* .overlay{
+  position: absolute;
+  width: 600px;
+  height: 335px;
+  opacity: .2;
+  z-index: -1;
+  border-radius: 10px;
+} */
+
+img{
+  position: relative;
+  width: 200px;
+  z-index: -2;
+}
+
+button{
+  margin-top: 30px;
+  justify-content: center;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: lightskyblue;
+  font-weight: bold;
+  color: blueviolet;
+}
+button:hover{
+  background-color: blueviolet;
+  color: lightskyblue;
+  transition: all 0s ease-in;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+  cursor: pointer;
+}
+
+.container-info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 80px;
+  padding: 0;
+}
+
+h3{
+  color: blueviolet;  
+  text-shadow: 1px 2px white;
+}
+
+.info-element{
+  display: inline;
+  font-size: 18px;
+  color: white;
+  text-shadow: 1px 2px blueviolet;
+}
+
+h2, small{
+  color: blueviolet;
+  text-shadow: 1px 2px white;
+}
+
+.location{
+  text-shadow: 1px 1px lightblue;
+}
+
+h1{
+  color: blueviolet;
+}
+
+span{
+  color: lightskyblue;
+}
+
+.weatherInfo{
+  align-self: center;
+
+}
+
+.weather-info-title{
+  border: 2px solid blueviolet;
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 5px rgba(255, 255, 255, 1);
+  font-weight: 610;
+  color: blueviolet;
+  text-shadow: 1.5px 1px white;
+}
+
+footer{
+  width: 100%;
+  height: 20px;
+  background: white;
+  margin-top: 30px;
+  padding: 6.5px 0;
+  opacity: .7;
+  font-weight: bold;
+  color: blueviolet;
+  text-shadow: 1.5px 1px lightblue;
+}
+
+.loader-title{
+  color: white;
+}
+.span-title{
+  color: blueviolet;
+}
+
+.fa-solid{
+  margin-right: 5px;
+  text-shadow: none;
+}
