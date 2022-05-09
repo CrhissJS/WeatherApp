@@ -1,6 +1,6 @@
 import React from 'react';
-import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import useFetch from '../hooks/useFetch';
 
 const colors = ["lightskyblue", "lightsteelblue", "lightgray", "lightblue"]
 
@@ -8,28 +8,7 @@ const imagesbg = ["https://static.diariofemenino.com/uploads/psicologia/218851-s
 
 const Weather = () => {
 
-    const [ weather, setWeather ] = useState({});
-
-    useEffect(()=>{
-        function success(pos) {
-        var crd = pos.coords;
-    
-        console.log('Your current position is:');
-        console.log('Latitude : ' + crd.latitude);
-        console.log('Longitude: ' + crd.longitude);
-        console.log('More or less' + crd.accuracy + 'meters.');
-        axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&appid=acebb4ad9cca4df994d748a14a4df488`)
-        .then((res) => setWeather(res.data))
-
-        }
-    
-        function error(err) {
-        console.warn("User denied acces to location");
-        }
-    
-        navigator.geolocation.getCurrentPosition(success, error);
-    
-    },[])
+    const { weather } = useFetch()
 
     const [ isCelcius, setIsCelcius ] = useState(true);
 
@@ -39,12 +18,10 @@ const Weather = () => {
 
     const randomImage = Math.floor(Math.random() * imagesbg.length);
 
-
     document.body.style = `background-image: url(${imagesbg[randomImage]});
     background-size: 110%;
     background-repeat: no-repeat;
     `   
-
     return (
     <div>
         <div className="container" >
